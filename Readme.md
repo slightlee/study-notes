@@ -7,3 +7,5 @@
 
     nextra中文文档： https://www.nextracn.com/
                     https://nextra.site/docs/guide
+
+    nextra模版：    https://github.com/shuding/nextra-docs-template
