@@ -1,3 +1,34 @@
 {
-    "index": "主页"
+  "index": {
+    "title": "首页",
+    "type": "page"
+  },
+  "more": {
+    "title": "更多",
+    "type": "menu",
+    "items": {
+      "content1": {
+        "title": "内容1",
+        "href": "/more/content1"
+      },
+      "content2": {
+        "title": "内容2",
+        "href": "/more/content2"
+      }
+    }
+  },
+  "about": {
+    "title": "关于",
+    "type": "menu",
+    "items": {
+      "about": {
+        "title": "关于我",
+        "href": "/about/info"
+      },
+      "contact": {
+        "title": "联系我们",
+        "href": "mailto:lmm_Work@163.com"
+      }
+    }
   }
+}

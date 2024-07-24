@@ -1,0 +1,13 @@
+{
+  "content1": {
+    "title": "内容1"
+  },
+  "content2": {
+    "title": "内容2"
+  },
+  "github_link": {
+    "title": "外部链接",
+    "href": "https://xxxx.com",
+    "newWindow": true
+  }
+}
