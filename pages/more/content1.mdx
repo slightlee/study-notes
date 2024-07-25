@@ -1,34 +1,726 @@
-## 一、项目整体研发流程
-### 1）团队共同确认目标和规划
-开会讨论，产出目标和规划文档
-### 2）产品调研和需求分析
-产出调研报告和需求分析文档
-### 3）需求评审
-开需求评审会，明确要做的需求和工作，评估工作量并明确工作时间节点。
-### 4）方案设计
-产出方案设计文档，比如数据库表设计、页面设计、接口设计等。
-### 5）研发
-包括各自开发、单元测试、前后端联调等
-### 6）测试和验收
-包括研发自测、产品验收、组内验收等
-### 7）代码提交
-提交可上线的代码，需要由负责人审查，通过后可合并
-### 8）部署上线
-将代码发布到服务器上，组内进行上线通知并更新上线文档，上线后需要自行验证
-### 9）产品迭代
-持续收集用户对新功能的反馈、并进行数据分析，从而验证改动效果，便于下一轮的更新迭代。
-## 二、开发规范
-开发前注意事项
-### 1）确保自己充分理解了业务和需求，需要先进行整体的方案设计；尤其是对于重要需求和核心业务，必须先跟组内同学核对方案并通过后，才能下手开发，避免重复工作。
-### 2）先熟悉项目再开发，建议阅读项目文档、项目代码、接口文档、前端组件文档等。
-### 3）慎重引入新的依赖或类库、或者升级版本，重大依赖变更需要和组内其他成员确认。
-### 4）熟悉团队已实现的功能和代码，尽量复用，避免重复开发。
-### 5）熟悉团队内部的研发规范，并在 IDE 中进行相应的配置，比如前端配置 ESLint、Prettier 等代码规范插件。
+## Markdown
 
-## 三、代码提交规范
-### 1）只有通过测试和产品验收的代码，才能够发起合并到主分支的 PR 请求。在这之前可以提交到自己的分支。
-### 2）发起合并到主分支的 PR 前，一定要完整阅读 3 遍自己的代码，避免不规范的写法和无意义的改动。
-### 3）每次合并尽量只专注于一个功能或改动，避免多个功能耦合在一起合并，提高审查效率并降低改动风险。
-### 4）每次提交时，需要在 commit 信息中提供代码改动说明，还可以通过关联需求文档、测试用例、方案文档、效果截图等方式进行补充说明。
-commit 信息可参考《约定式提交》文档，但不做强制要求。
-### 5）除非特殊情况，否则所有的代码必须经过至少一位项目负责人 Code Review 审核通过后，才能合并；并且只有合并到主分支的代码才允许发布上线。
+### MDX
+
+import { useState } from 'react'
+ 
+export function Counter({ children }) {
+  const [count, setCount] = useState(0)
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      {children}
+      {count}
+    </button>
+  )
+}
+ 
+<Counter>**Clicks**: </Counter>
+
+
+### 删除线
+
+
+````md filename="markdown"
+~~removed~~
+````
+效果
+
+~~removed~~
+
+
+### 任务列表
+
+````md filename="markdown"
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+````
+效果
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
+
+### 表格
+
+````md filename="markdown"
+| Syntax        | Description |   Test Text |
+| :------------ | :---------: | ----------: |
+| Header        |    Title    | Here's this |
+| Paragraph     |    Text     |    And more |
+| Strikethrough |             |    ~~Text~~ |
+````
+效果
+
+| Syntax        | Description |   Test Text |
+| :------------ | :---------: | ----------: |
+| Header        |    Title    | Here's this |
+| Paragraph     |    Text     |    And more |
+| Strikethrough |             |    ~~Text~~ |
+
+
+### 自动链接
+
+```markdown filename="markdown"
+Visit https://nextjs.org.
+```
+效果
+
+Visit https://nextjs.org.
+
+
+## 语法高亮
+Nextra 使用 [Shiki](https://shiki.matsu.io) 在构建时进行语法高亮。它非常可靠且高效。例如，在你的 Markdown 文件中添加这个：
+
+````md filename="markdown"
+```js
+console.log('hello, world')
+```
+````
+效果
+
+```js
+console.log('hello, world')
+```
+
+### 内嵌代码
+
+````md filename="markdown"
+Inlined syntax highlighting is also supported `let x = 1{:jsx}` via:
+````
+效果
+
+Inlined syntax highlighting is also supported `let x = 1{:jsx}` via:
+
+### 高亮行
+可以通过给代码块添加一个 {} 属性来高亮特定的代码行：
+
+
+````md filename="markdown"
+```js {1,4-5}
+import { useState } from 'react'
+ 
+function Counter() {
+  const [count, setCount] = useState(0)
+  return <button onClick={() => setCount(count + 1)}>{count}</button>
+}
+```
+````
+效果
+
+```js {1,4-5}
+import { useState } from 'react'
+ 
+function Counter() {
+  const [count, setCount] = useState(0)
+  return <button onClick={() => setCount(count + 1)}>{count}</button>
+}
+```
+
+### 高亮子字符串
+可以通过给代码块添加一个 // 属性来高亮特定的代码 子字符串： 例如下面将高亮 useState
+
+````md filename="markdown"
+```js /useState/
+import { useState } from 'react'
+ 
+function Counter() {
+  const [count, setCount] = useState(0)
+  return <button onClick={() => setCount(count + 1)}>{count}</button>
+}
+```
+````
+效果
+
+```js /useState/
+import { useState } from 'react'
+ 
+function Counter() {
+  const [count, setCount] = useState(0)
+  return <button onClick={() => setCount(count + 1)}>{count}</button>
+}
+```
+
+### 复制按钮
+
+通过添加一个 `copy` 属性，在用户悬停在代码块上时会添加一个复制按钮：
+````md filename="markdown"
+```js copy
+console.log('hello, world')
+```
+````
+效果
+
+```js copy
+console.log('hello, world')
+```
+或者 `next.config.js`文件中设置 `defaultShowCopyCode: true` 来全局启用这个功能。 
+```js
+const withNextra = require('nextra')({
+    defaultShowCopyCode: true
+})
+```
+一旦它在全局启用了，你可以通过 copy=false 属性来禁用它。
+````md filename="markdown"
+```js copy=false
+console.log('hello, world')
+```
+````
+效果
+
+```js copy=false
+console.log('hello, world')
+```
+
+### 行号
+
+可以通过添加一个 showLineNumbers 属性来给代码块添加行号：
+````md filename="markdown"
+```js showLineNumbers
+import { useState } from 'react'
+ 
+function Counter() {
+  const [count, setCount] = useState(0)
+  return <button onClick={() => setCount(count + 1)}>{count}</button>
+}
+```
+````
+效果
+
+```js showLineNumbers
+import { useState } from 'react'
+ 
+function Counter() {
+  const [count, setCount] = useState(0)
+  return <button onClick={() => setCount(count + 1)}>{count}</button>
+}
+```
+
+### 文件名和标题
+可以通过添加 filename 属性为代码块添加文件名或标题：
+````md filename="markdown"
+```js filename="example.js"
+console.log('hello, world')
+```
+````
+效果
+
+```js filename="example.js"
+console.log('hello, world')
+```
+
+### ANSI 高亮
+可以突出显示 ANSI 转义码
+
+````md filename="Markdown"
+```ansi
+[0m [0;32m✓[0m [0;2msrc/[0mindex[0;2m.test.ts (1)[0m
+  [0;2m Test Files [0m [0;1;32m1 passed[0;98m (1)[0m
+  [0;2m      Tests [0m [0;1;32m1 passed[0;98m (1)[0m
+  [0;2m   Start at [0m 23:32:41
+  [0;2m   Duration [0m 11ms
+  [42;1;39;0m PASS [0;32m Waiting for file changes...[0m
+         [0;2mpress [0;1mh[0;2m to show help, press [0;1mq[0;2m to quit
+```
+````
+效果
+
+```ansi
+[0m [0;32m✓[0m [0;2msrc/[0mindex[0;2m.test.ts (1)[0m
+  [0;2m Test Files [0m [0;1;32m1 passed[0;98m (1)[0m
+  [0;2m      Tests [0m [0;1;32m1 passed[0;98m (1)[0m
+  [0;2m   Start at [0m 23:32:41
+  [0;2m   Duration [0m 11ms
+  [42;1;39;0m PASS [0;32m Waiting for file changes...[0m
+         [0;2mpress [0;1mh[0;2m to show help, press [0;1mq[0;2m to quit
+```
+
+### 自定义主题
+
+Nextra 使用 CSS 变量来定义标记的颜色。您可以注入 全局 [CSS](https://nextjs.org/docs/pages/building-your-application/styling#adding-a-global-stylesheet) 以在亮色/暗色主题下进行自定义。例如，这是默认的 标记，您可以覆盖其中的任何一个：
+
+```css filename="styles.css"
+:root {
+  --shiki-color-text: #414141;
+  --shiki-color-background: transparent;
+  --shiki-token-constant: #1976d2;
+  --shiki-token-string: #22863a;
+  --shiki-token-comment: #aaa;
+  --shiki-token-keyword: #d32f2f;
+  --shiki-token-parameter: #ff9800;
+  --shiki-token-function: #6f42c1;
+  --shiki-token-string-expression: #22863a;
+  --shiki-token-punctuation: #212121;
+  --shiki-token-link: #22863a;
+}
+
+.dark {
+  --shiki-color-text: #d1d1d1;
+  --shiki-token-constant: #79b8ff;
+  --shiki-token-string: #ffab70;
+  --shiki-token-comment: #6b737c;
+  --shiki-token-keyword: #f97583;
+  --shiki-token-parameter: #ff9800;
+  --shiki-token-function: #b392f0;
+  --shiki-token-string-expression: #4bb74a;
+  --shiki-token-punctuation: #bbb;
+  --shiki-token-link: #ffab70;
+}
+```
+
+### 禁用语法高亮 ？？？
+
+您可以选择不使用内置的语法高亮显示功能，而使用自己的方式。 您可以在 Nextra 配置 (`next.config.js` 文件) 中设置 `codeHighlight: false` 来全局禁用语法高亮显示。
+
+
+### 自定义主题
+
+在 `mdxOptions.rehypePrettyCodeOptions` 中，你也可以提供自定义主题，而不是依赖 CSS 变量：
+```js filename="next.config.js"
+nextra({
+  // ... other options
+  mdxOptions: {
+    rehypePrettyCodeOptions: {
+      // VSCode theme or built-in Shiki theme, see Shiki documentation for more information
+      theme: JSON.parse(
+        readFileSync('./public/syntax/arctis_light.json', 'utf8')
+      )
+    }
+  }
+})
+```
+
+## Next.js 图片
+
+在 MDX 中使用 Next.js 图片 的标准方式是直接导入组件：
+
+import Image from 'next/image'
+ 
+<Image src="/logo.png" alt="图片丢失了" width={100} height={100} />
+
+### 静态图片
+<Callout>
+此功能默认通过 Nextra 配置中的 staticImage: true 启用。
+</Callout>
+
+Nextra 支持使用 Markdown 语法自动优化静态图片导入。您无需指定图片的宽度和高度，只需使用 `![]()` Markdown 语法：
+
+```mdx filename="index.mdx"
+![Hello](/demo.png)
+```
+
+这会加载`public`文件夹中的`demo.png`文件，并自动使用 Next.js `<Image>` 将其包装。
+<Callout>
+如果您不想通过 public 托管图像，还可以使用 `![](../public/demo.png)` 从相对路径加载图像。
+</Callout>
+使用 Next.js 图片，加载图像时不会有布局变化，并且默认情况下会显示一个漂亮的模糊占位符：
+
+## Next.js SSG 静态生成
+
+使用 Next.js，你可以使用 [静态生成 (SSG)](https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#static-generation-recommended) 预渲染你的页面。你的页面将在构建时生成，并以静态方式提供给访问者。它也可以由 CDN 缓存，以最大化性能。
+
+Nextra 也支持这个功能。以下是一个示例：
+
+
+import { useData } from 'nextra/data'
+ 
+export const getStaticProps = ({ params }) => {
+  return fetch(`https://api.github.com/repos/shuding/nextra`)
+    .then(res => res.json())
+    .then(repo => ({
+      props: {
+        // We add an `ssg` field to the page props,
+        // which will be provided to the Nextra `useData` hook.
+        ssg: {
+          stars: repo.stargazers_count
+        }
+      },
+      // The page will be considered as stale and regenerated every 60 seconds.
+      revalidate: 60
+    }))
+}
+ 
+export const Stars = () => {
+  // Get the data from SSG, and render it as a component.
+  const { stars } = useData()
+  return <strong>{stars}</strong>
+}
+
+<Callout type="error">
+注：TODO 此处样式没生效待处理
+</Callout>
+<div className="mt-6 rounded-xl border border-gray-200 p-4 dark:border-gray-900">
+ Nextra 在Github上现在有 <Stars /> 颗Star!
+</div>
+
+上面的数字是通过 `getStaticProps` 在构建时生成的。 启用了 [增量静态再生](https://nextjs.org/docs/pages/building-your-application/data-fetching#incremental-static-regeneration) 后，它将保持最新状态。
+
+---
+
+下面是上述示例的 MDX 代码：
+```mdx
+import { useData } from 'nextra/data'
+ 
+export const getStaticProps = ({ params }) => {
+  return fetch(`https://api.github.com/repos/shuding/nextra`)
+    .then(res => res.json())
+    .then(repo => ({
+      props: {
+        // We add an `ssg` field to the page props,
+        // which will be provided to the Nextra `useData` hook.
+        ssg: {
+          stars: repo.stargazers_count
+        }
+      },
+      // The page will be considered as stale and regenerated every 60 seconds.
+      revalidate: 60
+    }))
+}
+ 
+export const Stars = () => {
+  // Get the data from SSG, and render it as a component.
+  const { stars } = useData()
+  return <strong>{stars}</strong>
+}
+ 
+Nextra 在Github上现在有 <Stars /> 颗Star!
+```
+
+## Next.js I18n 多语言支持
+
+<Callout emoji="⚠️">此功能仅在 文档主题 中有效。</Callout>
+
+Nextra 支持[Next.js 国际化路由](https://nextjs.org/docs/advanced-features/i18n-routing)。这些文档解释如何配置和使用它。
+
+<Steps>
+### 添加国际化配置
+
+To add multi-language pages to your Nextra application, you need to config
+`i18n` in `next.config.js` first:
+
+```js filename="next.config.js" {7-10}
+const withNextra = require('nextra')({
+  theme: 'nextra-theme-docs',
+  themeConfig: './theme.config.tsx'
+})
+
+module.exports = withNextra({
+  i18n: {
+    locales: ['en-US', 'zh-CN', 'de-DE'],
+    defaultLocale: 'en-US'
+  }
+})
+```
+
+### 添加中间件
+
+然后，你需要在你项目的根目录中添加一个 middleware.js 文件 （[相关 Next.js 文档](https://nextjs.org/docs/advanced-features/middleware)）：
+
+```js
+export { locales as middleware } from 'nextra/locales'
+```
+
+如果已经定义了中间件，则可以改为执行以下操作：
+
+```js
+import { withLocales } from 'nextra/locales'
+
+export const middleware = withLocales(request => {
+  // Your middleware code...
+})
+```
+
+### 将地区代码添加到文件名中
+
+然后，将地区代码添加到你的文件扩展名中（默认地区也必需添加）：
+
+```plaintext
+/pages
+  _meta.en-US.json
+  _meta.zh-CN.json
+  _meta.de-DE.json
+  index.en-US.md
+  index.zh-CN.md
+  index.de-DE.md
+  ...
+```
+
+### 配置文档主题
+
+最后，将 `i18n` 选项添加到你的 `theme.config.jsx` 中，以配置语言下拉菜单：
+
+```js filename="theme.config.jsx"
+i18n: [
+  { locale: 'en-US', text: 'English' },
+  { locale: 'zh-CN', text: '中文' },
+  { locale: 'de-DE', text: 'Deutsch' },
+  { locale: 'ar-SA', text: 'العربية', direction: 'rtl' }
+]
+```
+</Steps>
+
+## 自定义CSS
+
+Nextra 与 Next.js 的内置 CSS 支持完全兼容， 包括 `.css`、`.module.css` 和 Sass（`.scss`、`.sass`、`.module.scss`、`.module.sass`）文件。
+
+例如，考虑以下名为 `styles.css` 的样式表：
+
+```css filename="styles.css"
+body {
+  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
+    'Arial', sans-serif;
+  padding: 20px 20px 60px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+```
+你可以创建一个 `pages/_app.js` 文件，并在那里导入你的 CSS 文件：
+
+```css filename="pages/_app.js"
+import '../styles.css'
+ 
+// This default export is required in a new `pages/_app.js` file.
+export default function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}
+```
+要了解更多关于 Next.js 中的 CSS 支持，请查看[Next.js](https://nextjs.org/docs/pages/building-your-application/styling) 文档。
+
+
+## 高级
+
+### LaTeX
+
+Nextra 使用 [KaTeX](https://katex.org) 来直接在 MDX 中渲染 LaTeX 表达式。 要启用 LaTeX 支持，你必须在你的 next.config.js 文件中启用 latex 选项：
+```js filename="next.config.js"
+module.exports = require('nextra')({
+  latex: true
+})
+```
+当启用时，KaTeX的CSS和字体将自动包含在您的站点中，您可以开始在MDX文件中编写数学表达式。在MDX中使用LaTeX就像将您的表达式包裹在`$`或`$$`中一样简单。
+
+### 示例
+例如以下Markdown代码：
+```mdx 
+The **Pythagorean equation**: $a=\sqrt{b^2 + c^2}$.
+```
+将会渲染成:
+
+The **Pythagorean equation**: $a=\sqrt{b^2 + c^2}$.
+
+您仍然可以在与您的LaTeX表达式相同的行中使用Markdown和MDX语法。
+
+<Callout>
+    如果您想要在内容中显示`$`而不是将其渲染为等式， 您可以使用反斜杠（`\`）进行转义。例如 `\$e = mc^2\$` 将被渲染为 $e = mc^2$。
+</Callout>
+
+
+
+
+## 内置组件
+### Callout 提示组件
+
+#### 默认信息
+
+import { Callout } from 'nextra/components'
+ 
+<Callout emoji="👾">
+  **Space Invaders** is a 1978 shoot 'em up arcade game developed by Tomohiro
+  Nishikado.
+</Callout>
+
+```mdx
+import { Callout } from 'nextra/components'
+ 
+<Callout emoji="👾">
+  **Space Invaders** is a 1978 shoot 'em up arcade game developed by Tomohiro
+  Nishikado.
+</Callout>
+```
+#### 提示信息
+
+<Callout type="info" emoji="ℹ️">
+  Today is Friday.
+</Callout>
+
+```mdx
+import { Callout } from 'nextra/components'
+
+<Callout type="info" emoji="ℹ️">
+  Today is Friday.
+</Callout>
+```
+
+#### 警告信息
+
+<Callout type="warning" emoji="⚠️">
+  This API will be deprecated soon.
+</Callout>
+
+```mdx
+import { Callout } from 'nextra/components'
+
+<Callout type="warning" emoji="⚠️">
+  This API will be deprecated soon.
+</Callout>
+```
+
+#### 错误信息
+
+<Callout type="error" emoji="🚫">
+  This is a dangerous feature that can cause everything to explode.
+</Callout>
+
+```mdx
+import { Callout } from 'nextra/components'
+
+<Callout type="error" emoji="️🚫">
+  This is a dangerous feature that can cause everything to explode.
+</Callout>
+```
+
+### Tab选项卡
+
+#### 示例
+
+import { Tabs } from 'nextra/components'
+
+{/* prettier-ignore */}
+<Tabs items={['pnpm', 'npm', 'yarn']}>
+  <Tabs.Tab>**pnpm**: Fast, disk space efficient package manager.</Tabs.Tab>
+  <Tabs.Tab>**npm** is a package manager for the JavaScript programming language.</Tabs.Tab>
+  <Tabs.Tab>**Yarn** is a software packaging system.</Tabs.Tab>
+</Tabs>
+
+#### 用法
+
+##### 默认
+
+{/* prettier-ignore */}
+```mdx
+import { Tabs } from 'nextra/components'
+
+<Tabs items={['pnpm', 'npm', 'yarn']}>
+  <Tabs.Tab>**pnpm**: Fast, disk space efficient package manager.</Tabs.Tab>
+  <Tabs.Tab>**npm** is a package manager for the JavaScript programming language.</Tabs.Tab>
+  <Tabs.Tab>**Yarn** is a software packaging system.</Tabs.Tab>
+</Tabs>
+```
+
+##### 默认选定的索引
+
+你可以使用 `defaultIndex` 属性来设置默认的选项卡索引：
+
+```mdx /defaultIndex="1"/
+import { Tabs } from 'nextra/components'
+
+<Tabs items={['pnpm', 'npm', 'yarn']} defaultIndex="1">
+  ...
+</Tabs>
+```
+
+这样你就将 `npm` 设置为默认选项卡：
+
+{/* prettier-ignore */}
+<Tabs items={['pnpm', 'npm', 'yarn']} defaultIndex="1">
+  <Tabs.Tab>**pnpm**: Fast, disk space efficient package manager.</Tabs.Tab>
+  <Tabs.Tab>**npm** is a package manager for the JavaScript programming language.</Tabs.Tab>
+  <Tabs.Tab>**Yarn** is a software packaging system.</Tabs.Tab>
+</Tabs>
+
+
+
+### Cards卡片组件 ？？
+
+
+
+### Steps 步骤组件
+
+一个内置组件，将编号列表转换为步骤的视觉表示。
+
+#### 示例
+
+import { Steps } from 'nextra/components'
+
+
+<Steps>
+
+### 这是第一步
+
+This is the first step description.
+
+### 这是第二步
+
+This is the second step description.
+
+### 这是第三步
+
+This is the third step description.
+
+</Steps>
+
+#### 用法
+
+使用 `Steps` 组件将一组 markdown h3 标题包裹起来，将它们转换为可视化的步骤。
+
+{/* prettier-ignore */}
+```mdx
+import { Steps } from 'nextra/components'
+
+<Steps>
+
+### 这是第一步
+
+This is the first step description.
+
+### 这是第二步
+
+This is the second step description.
+
+### 这是第三步
+
+This is the third step description.
+
+</Steps>
+```
+
+
+### File Tree 文件树组件
+
+
+#### 示例
+
+import { FileTree } from 'nextra/components'
+
+<FileTree>
+  <FileTree.Folder name="pages" defaultOpen>
+    <FileTree.File name="_meta.json" />
+    <FileTree.File name="contact.md" />
+    <FileTree.File name="index.mdx" />
+    <FileTree.Folder name="about">
+      <FileTree.File name="_meta.json" />
+      <FileTree.File name="legal.md" />
+      <FileTree.File name="index.mdx" />
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>
+
+#### 用法
+
+```mdx filename="Markdown"
+import { FileTree } from 'nextra/components'
+
+<FileTree>
+  <FileTree.Folder name="pages" defaultOpen>
+    <FileTree.File name="_meta.json" />
+    <FileTree.File name="contact.md" />
+    <FileTree.File name="index.mdx" />
+    <FileTree.Folder name="about">
+      <FileTree.File name="_meta.json" />
+      <FileTree.File name="legal.md" />
+      <FileTree.File name="index.mdx" />
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>
+```
