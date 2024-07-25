@@ -1,9 +1,12 @@
 {
   "content1": {
-    "title": "内容1"
+    "title": "nextra 指南"
   },
   "content2": {
     "title": "内容2"
+  },
+  "content3": {
+    "title": "内容3"
   },
   "github_link": {
     "title": "外部链接",

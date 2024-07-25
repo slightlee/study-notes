@@ -8,12 +8,16 @@
     "type": "menu",
     "items": {
       "content1": {
-        "title": "内容1",
+        "title": "nextra 指南",
         "href": "/more/content1"
       },
       "content2": {
         "title": "内容2",
         "href": "/more/content2"
+      },
+      "content3": {
+        "title": "内容3",
+         "href": "/more/content3"
       }
     }
   },
