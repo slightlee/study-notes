@@ -8,6 +8,9 @@
   "content3": {
     "title": "内容3"
   },
+  "ApacheLicense": {
+    "title": "Apache License"
+  },
   "github_link": {
     "title": "外部链接",
     "href": "https://xxxx.com",
