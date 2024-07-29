@@ -11,6 +11,9 @@
   "ApacheLicense": {
     "title": "Apache License"
   },
+  "CodeReview": {
+    "title": "Code Review"
+  },
   "github_link": {
     "title": "外部链接",
     "href": "https://xxxx.com",
