@@ -17,7 +17,17 @@
       },
       "content3": {
         "title": "内容3",
-         "href": "/more/content3"
+        "href": "/more/content3"
+      }
+    }
+  },
+  "dev": {
+    "title": "开发环境",
+    "type": "menu",
+    "items": {
+      "ssl": {
+        "title": "SSL证书",
+        "href": "/dev/ssl"
       }
     }
   },
