@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["./*"],
+        "@public/*": ["public/*"],
+        "@styles/*": ["styles/*"]
+      }
+    },
+    "exclude": ["node_modules"]
+  }
+
+  // todo 别名路径跳转问题
+  // https://nextjs.org/docs/pages/building-your-application/configuring/absolute-imports-and-module-aliases

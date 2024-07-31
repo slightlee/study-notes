@@ -1,5 +1,5 @@
 import Image from "next/image"
-import logoPng from './public/logo.png'
+import logoPng from '@public/logo.png'
 
 export default {
   docsRepositoryBase: 'https://github.com/slightlee/study-notes/tree/main',
