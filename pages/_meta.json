@@ -21,13 +21,17 @@
       }
     }
   },
-  "dev": {
+  "dev_env": {
     "title": "开发环境",
     "type": "menu",
     "items": {
+      "tool": {
+        "title": "开发工具",
+        "href": "/dev_env/tool"
+      },
       "ssl": {
         "title": "SSL证书",
-        "href": "/dev/ssl"
+        "href": "/dev_env/ssl"
       }
     }
   },
@@ -40,7 +44,7 @@
         "href": "/about/info"
       },
       "contact": {
-        "title": "联系我们",
+        "title": "联系我",
         "href": "mailto:lmm_Work@163.com"
       }
     }
