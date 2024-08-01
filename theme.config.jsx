@@ -13,13 +13,13 @@ export default {
       <title>Y笔记</title>
     </>
   ),
-  banner: {
-    key: '1.0-release',
-    text: (
-      <span>每天进步一点点🎉🎉</span>
-    ),
-    dismissible: false
-  },
+  // banner: {
+  //   key: '1.0-release',
+  //   text: (
+  //     <span>每天进步一点点🎉🎉</span>
+  //   ),
+  //   dismissible: false
+  // },
   logo: (
     <>
       <Image src={logoPng} alt="Logo" width={24} height={24} />
