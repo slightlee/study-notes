@@ -1,10 +1,8 @@
 version: "3"
 services:
   docs:
+    image: registry.cn-beijing.aliyuncs.com/demain_images/docs:latest
     container_name: study-notes
     restart: always
-    build:
-      context: .
-      dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "31006:3000"
