@@ -1,0 +1,10 @@
+version: "3"
+services:
+  docs:
+    container_name: study-notes
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
