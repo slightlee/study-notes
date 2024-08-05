@@ -10,21 +10,21 @@ export default {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta property="og:title" content="Nextra" />
       <meta property="og:description" content="The next site builder" />
-      <title>一点笔记</title>
+      <title>Y笔记</title>
     </>
   ),
-  banner: {
-    key: '1.0-release',
-    text: (
-      <span>每天进步一点点🎉🎉</span>
-    ),
-    dismissible: false
-  },
-  logo:  (
+  // banner: {
+  //   key: '1.0-release',
+  //   text: (
+  //     <span>每天进步一点点🎉🎉</span>
+  //   ),
+  //   dismissible: false
+  // },
+  logo: (
     <>
-    <Image src={logoPng} alt="Logo" width={24} height={24} />
+      <Image src={logoPng} alt="Logo" width={24} height={24} />
       <span style={{ marginLeft: '.4em', fontWeight: 800 }}>
-        一点笔记
+        Y笔记
       </span>
     </>
   ),
@@ -65,7 +65,7 @@ export default {
       <span>
         {new Date().getFullYear()} ©{' '}
         <a href="https://xxx.com" target="_blank">
-          一点笔记
+          Y笔记
         </a>
       </span>
     )
