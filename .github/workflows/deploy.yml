@@ -40,7 +40,7 @@ jobs:
 
       - name: Notify server to deploy
         run: |
-          IMAGE_TAG="${image_name}:${tag_name}-${{ github.sha }}"
+          IMAGE_TAG="${{ env.IMAGE_NAME }}:${{ env.TAG_NAME }}-${{ github.sha }}"
           echo "IMAGE_TAG: ${IMAGE_TAG}"
           curl -X POST ${{ secrets.SERVER_WEBHOOK_URL }} \
             -H 'Content-Type: application/json' \
