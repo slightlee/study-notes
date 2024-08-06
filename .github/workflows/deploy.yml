@@ -32,8 +32,8 @@ jobs:
           docker push $IMAGE_NAME:${TAG_NAME}-${{ github.sha }}
 
           # setting variable
-          echo "::set-output name=tag_name::${TAG_NAME}"
-          echo "::set-output name=image_name::${IMAGE_NAME}"
+          echo "tag_name=${TAG_NAME}" >> $GITHUB_OUTPUT
+          echo "image_name=${IMAGE_NAME}" >> $GITHUB_OUTPUT
 
       - name: Notify server to deploy
         run: |
