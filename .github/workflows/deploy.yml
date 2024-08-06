@@ -34,9 +34,10 @@ jobs:
           # passing variables
           echo "tag_name: ${TAG_NAME}"
           echo "images_name: ${IMAGE_NAME}"
-
-          echo "tag_name=${TAG_NAME}" >> $GITHUB_OUTPUT
-          echo "image_name=${IMAGE_NAME}" >> $GITHUB_OUTPUT
+          
+        env:
+          TAG_NAME: ${TAG_NAME}
+          IMAGE_NAME: ${IMAGE_NAME}
 
       - name: Notify server to deploy
         run: |
