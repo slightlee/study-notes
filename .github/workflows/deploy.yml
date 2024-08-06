@@ -31,13 +31,16 @@ jobs:
           docker build -t $IMAGE_NAME:${TAG_NAME}-${{ github.sha }} .
           docker push $IMAGE_NAME:${TAG_NAME}-${{ github.sha }}
 
-          # setting variable
+          # passing variables
+          echo "tag_name: ${TAG_NAME}"
+          echo "images_name: ${IMAGE_NAME}"
+
           echo "tag_name=${TAG_NAME}" >> $GITHUB_OUTPUT
           echo "image_name=${IMAGE_NAME}" >> $GITHUB_OUTPUT
 
       - name: Notify server to deploy
         run: |
-          IMAGE_TAG="${{ steps.build_and_push.outputs.image_name }}:${{ steps.build_and_push.outputs.tag_name }}-${{ github.sha }}"
+          IMAGE_TAG="${IMAGE_NAME}:${TAG_NAME}-${{ github.sha }}"
           echo "IMAGE_TAG: ${IMAGE_TAG}"
           curl -X POST ${{ secrets.SERVER_WEBHOOK_URL }} \
             -H 'Content-Type: application/json' \
