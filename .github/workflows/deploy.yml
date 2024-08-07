@@ -30,7 +30,7 @@ jobs:
 
           # Build and push with unique tag
           docker build -t $IMAGE_NAME:${TAG_NAME}-${SHORT_SHA} .
-          docker push $IMAGE_NAME:${TAG_NAME}-${SHORT_SHA} .
+          docker push $IMAGE_NAME:${TAG_NAME}-${SHORT_SHA}
 
           # passing variables
           echo "tag_name: ${TAG_NAME}"
