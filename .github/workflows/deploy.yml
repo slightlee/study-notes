@@ -33,16 +33,34 @@ jobs:
           docker push $IMAGE_NAME:${TAG_NAME}-${SHORT_SHA}
 
           # passing variables
-          echo "tag_name: ${TAG_NAME}"
-          echo "images_name: ${IMAGE_NAME}"
+          echo "TAG_NAME: ${TAG_NAME}"
+          echo "IMAGE_NAME: ${IMAGE_NAME}"
+          echo "SHORT_SHA: ${SHORT_SHA}"
 
           echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_ENV
           echo "IMAGE_NAME=${IMAGE_NAME}" >> $GITHUB_ENV
           echo "SHORT_SHA=${SHORT_SHA}" >> $GITHUB_ENV
-        
-        env:
-          TAG_NAME: ${TAG_NAME}
-          IMAGE_NAME: 
+      
+        # https://help.aliyun.com/zh/cli/configure-credentials?spm=a2c4g.11186623.0.0.37714b90tff8nD
+      - name: Install aliyun CLI
+        run: |
+          curl -Lo aliyun.tgz https://aliyuncli.alicdn.com/aliyun-cli-linux-latest-amd64.tgz
+          tar -xvzf aliyun.tgz
+          mv aliyun /usr/local/bin/
+
+      - name: Setting aliyun CLI
+        run: |
+          aliyun configure set --profile akProfile --mode AK --region ${{ secrets.ALIYUN_REGION }} --access-key-id ${{ secrets.ALIYUN_ACCESS_KEY_ID }} --access-key-secret ${{ secrets.ALIYUN_ACCESS_KEY_SECRET }}
+
+      - name: Delete older Docker version
+        run: |
+          IMAGE_NAME=${{ env.IMAGE_NAME }}
+          TAG_NAME=${{ env.TAG_NAME }}
+          aliyun cr GET /repos/${{ secrets.ALIYUN_NAMESPACES }}/${{ secrets.ALIYUN_REPO }}/tags | jq -r '.tags[].tag' | grep "^${TAG_NAME}-" | while read tag; do
+            if [ "$tag" != "${TAG_NAME}-${SHORT_SHA}" ]; then
+              aliyun cr DELETE /repos/${{ secrets.ALIYUN_NAMESPACES }}/${{ secrets.ALIYUN_REPO }}/tags/$tag
+            fi
+          done
 
       - name: Notify server to deploy
         run: |
