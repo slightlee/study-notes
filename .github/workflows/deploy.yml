@@ -56,9 +56,18 @@ jobs:
         run: |
           IMAGE_NAME=${{ env.IMAGE_NAME }}
           TAG_NAME=${{ env.TAG_NAME }}
-          aliyun cr GET /repos/${{ secrets.ALIYUN_NAMESPACES }}/${{ secrets.ALIYUN_REPO }}/tags | jq -r '.tags[].tag' | grep "^${TAG_NAME}-" | while read tag; do
+          SHORT_SHA=${{ env.SHORT_SHA }}
+          echo "Deleting old images for $IMAGE_NAME with tag $TAG_NAME"
+          
+          # List all tags
+          TAGS=$(aliyun cr GET /repos/${{ secrets.ALIYUN_NAMESPACE }}/${{ secrets.ALIYUN_REPO }}/tags --output json | jq -r '.tags[].tag')
+          echo "Found tags: $TAGS"
+          
+          # Delete tags except the current one
+          echo "$TAGS" | grep "^${TAG_NAME}-" | while read tag; do
             if [ "$tag" != "${TAG_NAME}-${SHORT_SHA}" ]; then
-              aliyun cr DELETE /repos/${{ secrets.ALIYUN_NAMESPACES }}/${{ secrets.ALIYUN_REPO }}/tags/$tag
+              echo "Deleting tag: $tag"
+              aliyun cr DELETE /repos/${{ secrets.ALIYUN_NAMESPACE }}/${{ secrets.ALIYUN_REPO }}/tags/$tag
             fi
           done
 
