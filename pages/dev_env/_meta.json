@@ -1,4 +1,10 @@
 {
   "tool": "开发工具",
-  "ssl": "SSL证书"
+  "-- 1": {
+    "type": "separator"
+  },
+  "ssl": "SSL证书",
+  "-- 2": {
+    "type": "separator"
+  }
 }
