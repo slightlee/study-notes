@@ -69,6 +69,18 @@ export default {
         </a>
       </span>
     )
-  }
+  },
+  gitTimestamp: ({ timestamp }) => {
+    const date = new Date(timestamp);
+    const options = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    };
+    return `最后更新于 ${date.toLocaleDateString('zh-CN', options)}`;
+  },
 }
 //   https://nextra.site/docs/docs-theme/theme-configuration
