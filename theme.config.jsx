@@ -1,5 +1,6 @@
 import Image from "next/image"
 import logoPng from '@public/logo.png'
+import ScrollToTop from './components/global/ScrollToTop'
 
 export default {
   docsRepositoryBase: 'https://github.com/slightlee/study-notes/tree/main',
@@ -39,7 +40,8 @@ export default {
   },
   toc: {
     title: '内容目录',
-    backToTop: true,
+    backToTop: false,
+    extraContent: <ScrollToTop />
   },
   feedback: {
     content: '有疑问？给我们反馈→',
