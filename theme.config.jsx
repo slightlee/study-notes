@@ -30,7 +30,12 @@ export default {
     </>
   ),
   search: {
-    placeholder: '搜索文档...'
+    placeholder: '搜索文档...',
+    emptyResult: <>
+      <span class="nx-block nx-select-none nx-p-8 nx-text-center nx-text-sm nx-text-gray-400">
+      未找到相关内容，请尝试其它关键词
+      </span>
+    </>
   },
   project: {
     link: 'https://github.com/slightlee/study-notes'
