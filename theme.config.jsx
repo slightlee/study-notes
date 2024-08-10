@@ -33,7 +33,7 @@ export default {
     placeholder: '搜索文档...',
     emptyResult: <>
       <span class="nx-block nx-select-none nx-p-8 nx-text-center nx-text-sm nx-text-gray-400">
-      未找到相关内容，请尝试其它关键词
+        未找到相关内容，请尝试其它关键词
       </span>
     </>
   },
@@ -41,7 +41,22 @@ export default {
     link: 'https://github.com/slightlee/study-notes'
   },
   sidebar: {
-    toggleButton: true
+    toggleButton: true,
+    titleComponent({ title }) {
+      const titles = ["开发工具", "SSL证书"];
+      if (titles.includes(title)) {
+        return (
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#87CEFA" class="bi bi-grid-1x2-fill" viewBox="0 0 16 16">
+              <path d="M0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1zm0 9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1z" />
+            </svg>
+            &nbsp;&nbsp;
+            <span><b>{title}</b></span>
+          </div>
+        );
+      }
+      return <>{title}</>
+    }
   },
   toc: {
     title: '内容目录',
