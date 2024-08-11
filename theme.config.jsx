@@ -86,9 +86,7 @@ export default {
     text: (
       <span>
         {new Date().getFullYear()} ©{' '}
-        <a href="https://docs.1ddh.cn" target="_blank">
-          Y笔记
-        </a>
+        Y笔记
       </span>
     )
   },
