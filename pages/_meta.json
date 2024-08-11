@@ -21,17 +21,17 @@
       }
     }
   },
-  "dev_env": {
+  "dev-env": {
     "title": "开发环境",
     "type": "menu",
     "items": {
       "tool": {
         "title": "开发工具",
-        "href": "/dev_env/tool"
+        "href": "/dev-env/tool"
       },
       "ssl": {
         "title": "SSL证书",
-        "href": "/dev_env/ssl"
+        "href": "/dev-env/ssl"
       }
     }
   },
