@@ -6,5 +6,9 @@
   "ssl": "SSL证书",
   "-- 2": {
     "type": "separator"
+  },
+  "mac": "Mac",
+  "-- 3": {
+    "type": "separator"
   }
 }

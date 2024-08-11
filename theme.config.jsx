@@ -43,7 +43,7 @@ export default {
   sidebar: {
     toggleButton: true,
     titleComponent({ title }) {
-      const titles = ["开发工具", "SSL证书"];
+      const titles = ["开发工具", "SSL证书", "Mac"];
       if (titles.includes(title)) {
         return (
           <div style={{ display: "flex", alignItems: "center" }}>

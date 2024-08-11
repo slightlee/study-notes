@@ -1,0 +1,61 @@
+官方地址：
+[https://brew.sh](https://brew.sh)
+
+在网上搜了很多 brew 安装方式，包括使用官网的方式都安装报错
+Failed to connect to raw.githubusercontent.com port 443: Connection refused
+
+## 方式 1：
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+## 方式 2：
+
+国内用户可用 CDN 安装命令
+
+```
+/bin/bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/duzyn/homebrew-cn/install.sh)"
+```
+
+## 方式 3：
+
+> [https://gitee.com/cunkai/HomebrewCN/](https://gitee.com/cunkai/HomebrewCN/) 开源项目
+
+苹果电脑标准安装脚本：（推荐 优点全面 缺点慢一点）
+
+```shell
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+```
+
+Linux 标准安装脚本：
+
+```shell
+rm Homebrew.sh ; wget https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh ; bash Homebrew.sh
+```
+
+苹果电脑卸载脚本：
+
+```shell
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/HomebrewUninstall.sh)"
+```
+
+Linux 卸载脚本：
+
+```shell
+rm HomebrewUninstall.sh ; wget https://gitee.com/cunkai/HomebrewCN/raw/master/HomebrewUninstall.sh ; bash HomebrewUninstall.sh
+```
+
+![image.png](https://cdn.dml.us.kg/docs/2024/png/1670046889964-24e90dc0-829f-4cdf-be4d-0745374bf905.png)
+
+![image.png](https://cdn.dml.us.kg/docs/2024/png/1670047067726-36dc59c3-fc21-4213-af90-794a4e7b090b.png)
+
+初步介绍几个 brew 命令：
+
+> 本地软件库列表：brew ls
+> 查找软件：brew search google（其中 google 替换为要查找的软件关键字）
+> 查看 brew 版本：brew -v  
+> 更新 brew 版本：brew update
+> 卸载命令：brew uninstall
+
+![image.png](https://cdn.dml.us.kg/docs/2024/png/1695620694731-3f2b8a75-b74c-4f30-b9f9-89cb2eff8fc3.png)
