@@ -32,6 +32,10 @@
       "ssl": {
         "title": "SSL证书",
         "href": "/dev-env/ssl"
+      },
+      "mac": {
+        "title": "Mac",
+        "href": "/dev-env/mac"
       }
     }
   },

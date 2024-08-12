@@ -1,4 +1,13 @@
 {
   "index": "介绍页",
-  "brew": "安装brew"
+  "brew": "安装 brew",
+  "configure-ohmyzsh": "安装 oh my zsh",
+  "configure-jdk": "安装 jdk",
+  "configure-python": "安装 python",
+  "configure-nvm": "安装 nvm",
+  "configure-nrm": "安装 nrm",
+  "configure-pnpm": "安装 pnpm",
+  "configure-whistle": "安装 whistle",
+  "configure-maven": "安装 maven",
+  "configure-nginx": "安装 nginx【brew方式】"
 }
