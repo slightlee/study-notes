@@ -1,12 +1,6 @@
 {
-  "content1": {
+  "nextra": {
     "title": "nextra 指南"
-  },
-  "content2": {
-    "title": "内容2"
-  },
-  "content3": {
-    "title": "内容3"
   },
   "ApacheLicense": {
     "title": "Apache License"

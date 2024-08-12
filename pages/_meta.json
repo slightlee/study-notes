@@ -3,24 +3,6 @@
     "title": "首页",
     "type": "page"
   },
-  "more": {
-    "title": "更多",
-    "type": "menu",
-    "items": {
-      "content1": {
-        "title": "nextra 指南",
-        "href": "/more/content1"
-      },
-      "content2": {
-        "title": "内容2",
-        "href": "/more/content2"
-      },
-      "content3": {
-        "title": "内容3",
-        "href": "/more/content3"
-      }
-    }
-  },
   "dev-env": {
     "title": "开发环境",
     "type": "menu",
@@ -36,6 +18,16 @@
       "mac": {
         "title": "Mac",
         "href": "/dev-env/mac"
+      }
+    }
+  },
+  "more": {
+    "title": "更多",
+    "type": "menu",
+    "items": {
+      "content1": {
+        "title": "nextra 指南",
+        "href": "/more/nextra"
       }
     }
   },
