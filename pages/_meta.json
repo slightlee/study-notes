@@ -25,9 +25,8 @@
     "title": "更多",
     "type": "menu",
     "items": {
-      "content1": {
-        "title": "nextra 指南",
-        "href": "/more/nextra"
+      "nextra": {
+        "title": "nextra 指南"
       }
     }
   },

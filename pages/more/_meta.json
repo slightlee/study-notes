@@ -2,15 +2,29 @@
   "nextra": {
     "title": "nextra 指南"
   },
-  "ApacheLicense": {
-    "title": "Apache License"
+  "nextra_official_link": {
+    "title": "nextra 官方文档",
+    "href": "https://nextra.site",
+    "newWindow": true
   },
-  "CodeReview": {
-    "title": "Code Review"
+  "nextra_zh_link": {
+    "title": "nextra 中文文档",
+    "href": "https://www.nextracn.com",
+    "newWindow": true
   },
-  "github_link": {
-    "title": "外部链接",
-    "href": "https://xxxx.com",
+  "nextra_template_link": {
+    "title": "nextra 模版地址",
+    "href": "https://github.com/shuding/nextra-docs-template",
+    "newWindow": true
+  },
+  "nextjs_official_link": {
+    "title": "nextjs 官方文档",
+    "href": "https://nextjs.org",
+    "newWindow": true
+  },
+  "nextjs_cn_link": {
+    "title": "nextjs 中文文档",
+    "href": "https://www.nextjs.cn",
     "newWindow": true
   }
 }
