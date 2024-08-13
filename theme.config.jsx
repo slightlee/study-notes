@@ -41,6 +41,7 @@ export default {
     link: 'https://github.com/slightlee/study-notes'
   },
   sidebar: {
+    defaultMenuCollapseLevel: 2,
     toggleButton: true,
     titleComponent({ title }) {
       const titles = ["开发工具", "SSL证书", "Mac"];
