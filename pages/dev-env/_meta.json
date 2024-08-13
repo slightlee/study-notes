@@ -10,5 +10,9 @@
   "mac": "Mac",
   "-- 3": {
     "type": "separator"
+  },
+  "linux": "Linux",
+  "-- 4": {
+    "type": "separator"
   }
 }

@@ -18,6 +18,10 @@
       "mac": {
         "title": "Mac",
         "href": "/dev-env/mac"
+      },
+       "linux": {
+        "title": "Linux",
+        "href": "/dev-env/linux"
       }
     }
   },
