@@ -1,0 +1,30 @@
+
+```shell
+
+# windows 下 git add .  git commit -m  ->  git acm
+git config --global alias.acm '!f() { git add . && git commit -m "$1"; }; f'
+
+# git commit -> git c
+git config --global alias.c commit
+
+# git commit -m  ->  git cm 
+git config --global alias.cm "commit -m"
+
+# git status 简写
+git config --global alias.s status
+
+# 所有分支详细提交日志
+git config --global alias.ll "log --stat --abbrev-commit"
+
+# 所有分支带色彩日志
+git config --global alias.l "log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'"
+
+# 当前分支带色彩日志 提交ID（短）
+git config --global alias.lg "log --color --graph --pretty=format:'%C(bold white)%h%Creset -%C(bold green)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+
+# 所有分支带色彩日志 提交ID（长）
+git config --global alias.llg "log --color --graph --pretty=format:'%C(bold white)%H %d%Creset%n%s%n%+b%C(bold blue)%an <%ae>%Creset %C(bold green)%cr (%ci)' --abbrev-commit"
+
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+```

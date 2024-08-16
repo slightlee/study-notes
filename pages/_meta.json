@@ -22,7 +22,11 @@
        "linux": {
         "title": "Linux",
         "href": "/dev-env/linux"
-      }
+      },
+      "git": {
+       "title": "Git",
+       "href": "/dev-env/git"
+     }
     }
   },
   "more": {

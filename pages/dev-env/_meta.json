@@ -14,5 +14,9 @@
   "linux": "Linux",
   "-- 4": {
     "type": "separator"
+  },
+  "git": "Git",
+  "-- 5": {
+    "type": "separator"
   }
 }
