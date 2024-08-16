@@ -16,11 +16,11 @@
         "href": "/dev-env/ssl"
       },
       "mac": {
-        "title": "Mac",
+        "title": "Mac环境",
         "href": "/dev-env/mac"
       },
        "linux": {
-        "title": "Linux",
+        "title": "Linux环境",
         "href": "/dev-env/linux"
       },
       "git": {

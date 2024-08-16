@@ -7,11 +7,11 @@
   "-- 2": {
     "type": "separator"
   },
-  "mac": "Mac",
+  "mac": "Mac环境",
   "-- 3": {
     "type": "separator"
   },
-  "linux": "Linux",
+  "linux": "Linux环境",
   "-- 4": {
     "type": "separator"
   },
