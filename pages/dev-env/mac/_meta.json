@@ -9,5 +9,6 @@
   "configure-pnpm": "安装 pnpm",
   "configure-whistle": "安装 whistle",
   "configure-maven": "安装 maven",
-  "configure-nginx": "安装 nginx【brew方式】"
+  "configure-nginx": "安装 nginx【brew方式】",
+  "configure-uninstall-jdk": "卸载 jdk"
 }
