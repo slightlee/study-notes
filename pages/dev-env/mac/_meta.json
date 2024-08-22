@@ -10,5 +10,6 @@
   "configure-whistle": "安装 whistle",
   "configure-maven": "安装 maven",
   "configure-nginx": "安装 nginx【brew方式】",
+  "configure-iterm2": "配置 iterm2",
   "configure-uninstall-jdk": "卸载 jdk"
 }
