@@ -18,5 +18,9 @@
   "git": "Git",
   "-- 5": {
     "type": "separator"
+  },
+  "proxy": "代理工具",
+  "-- 6": {
+    "type": "separator"
   }
 }
