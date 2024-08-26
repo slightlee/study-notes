@@ -27,7 +27,7 @@ FRP（Fast Reverse Proxy）是一个高性能的反向代理应用，它主要�
 - **远程办公**：通过FRP访问公司内部资源，如文件服务器、内部网站等。
 - **IoT设备管理**：通过FRP访问和管理部署在内网的IoT设备。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/2350759/1723440943342-ba707f2e-0705-43d0-8e6c-cb1d890074b7.png#averageHue=%2347704c&clientId=u87fb606c-c8ff-4&from=paste&id=u3d8d0991&originHeight=500&originWidth=505&originalType=url&ratio=1.375&rotation=0&showTitle=false&status=done&style=none&taskId=u2c23f448-f697-46aa-b3c3-cd514ad9808&title=)
+![](https://cdn.dml.us.kg/docs/2024/png/202408261724269.png)
 
 > 注意：从 [v0.52.0] 版本开始，配置文件由 frps.ini 改成了 frps.toml
 
@@ -90,7 +90,7 @@ webServer.password = "admin"
 
 ```
 输入ip+端口号 ，输入账号密码 访问 dashboard，页面如下： 服务端配置已完成 .
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/2350759/1710398404508-f34de675-fe53-4b56-9c04-f83118709d27.png#averageHue=%23fefefe&clientId=uce1576d2-fbb9-4&from=paste&height=820&id=ERMRH&originHeight=738&originWidth=1895&originalType=binary&ratio=0.8999999761581421&rotation=0&showTitle=false&size=53859&status=done&style=none&taskId=u0822bd07-73a5-4a3a-9495-5fbcf1ee22c&title=&width=2105.5556113337307)
+![image.png](https://cdn.dml.us.kg/docs/2024/png/202408261724270.png)
 
 
 
@@ -149,7 +149,7 @@ sudo systemctl enable frps
 ```
 ## 2、Nginx 配置
 ### 2.1、域名解析
-域名解析 添加 frp 以及 *.frp 二级域名，域名可自定义![image.png](https://cdn.nlark.com/yuque/0/2024/png/2350759/1710398485475-ab085fb4-3194-41ae-bc37-61f4e71d7695.png#averageHue=%23fdfdfc&clientId=uce1576d2-fbb9-4&from=paste&height=156&id=u46709781&originHeight=140&originWidth=388&originalType=binary&ratio=0.8999999761581421&rotation=0&showTitle=false&size=4285&status=done&style=none&taskId=ua0414444-00df-4ba3-bfee-f22495e4b5a&title=&width=431.1111225316557)
+域名解析 添加 frp 以及 *.frp 二级域名，域名可自定义![image.png](https://cdn.dml.us.kg/docs/2024/png/202408261724271.png)
 ### 2.2、nginx 配置文件增加 如下配置
 ```
 server {
@@ -192,7 +192,7 @@ https://github.com/fatedier/frp/releases/download/v0.55.1/frp_0.55.1_windows_amd
 ### 3.2 配置
 > 解压 frp_0.55.1_windows_amd64.zip
 
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/2350759/1710398660215-323ae4e1-a235-42ac-aadc-4cb8f3a9c0a1.png#averageHue=%23fbfbfa&clientId=uce1576d2-fbb9-4&from=paste&height=284&id=u117ca9f7&originHeight=256&originWidth=617&originalType=binary&ratio=0.8999999761581421&rotation=0&showTitle=false&size=16494&status=done&style=none&taskId=uf9255043-d998-4f95-b480-db6fe88f8c0&title=&width=685.5555737165762)
+![image.png](https://cdn.dml.us.kg/docs/2024/png/202408261724272.png)
 #### 3.2.1 修改配置
 > 修改frpc.toml 文件
 
@@ -231,10 +231,10 @@ windows 下启动命令：
 #### 3.2.3 访问 dashboard 页面
 > 可以看到 web 代理已经成功
 
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/2350759/1710398892372-beb1ede7-4b51-4756-9182-bfbe36c98257.png#averageHue=%23fefefe&clientId=uce1576d2-fbb9-4&from=paste&height=511&id=u414fe77a&originHeight=460&originWidth=1886&originalType=binary&ratio=0.8999999761581421&rotation=0&showTitle=false&size=41531&status=done&style=none&taskId=u07a8bedc-64b1-448e-a831-99af215b997&title=&width=2095.5556110688212)
+![image.png](https://cdn.dml.us.kg/docs/2024/png/202408261724273.png)
 
 #### 3.2.4 浏览器访问代理接口
-![image.png](https://cdn.nlark.com/yuque/0/2024/png/2350759/1710399134517-d4cff11c-f995-4626-8899-bd5efddaf823.png#averageHue=%23c7b781&clientId=uce1576d2-fbb9-4&from=paste&height=176&id=u9f513e1c&originHeight=158&originWidth=481&originalType=binary&ratio=0.8999999761581421&rotation=0&showTitle=false&size=12382&status=done&style=none&taskId=u481f1898-cb1b-48b2-a465-71e77aa9c46&title=&width=534.4444586023876)
+![image.png](https://cdn.dml.us.kg/docs/2024/png/202408261724274.png)
 
 ## 参考文档
 > 官方文档： [https://gofrp.org/zh-cn/docs/overview/](https://gofrp.org/zh-cn/docs/overview/)
