@@ -19,14 +19,18 @@
         "title": "Mac环境",
         "href": "/dev-env/mac"
       },
-       "linux": {
+      "linux": {
         "title": "Linux环境",
         "href": "/dev-env/linux"
       },
       "git": {
-       "title": "Git",
-       "href": "/dev-env/git"
-     }
+        "title": "Git",
+        "href": "/dev-env/git"
+      },
+      "proxy": {
+        "title": "代理工具",
+        "href": "/dev-env/proxy"
+      }
     }
   },
   "more": {
