@@ -7,19 +7,15 @@ gitlens是老外写的vscode插件，开始是免费的，后来收费，无奈�
 在插件代码里面搜索这个`Start Pro Trial`，就可以找到弹窗这个弹窗的逻辑位置(需要花点功夫)
 下面是具体过程
 ### 找到gitlens插件目录
-vscode的插件目录是在个人主目录下的的.vscode文件夹，比如我的是在`C:\Users\a`目录下
+vscode的插件目录是在个人主目录下的的.vscode文件夹，比如我的是在`C:\Users\ming\.vscode`目录下
 ![image.jpg](https://cdn.dml.us.kg/docs/2024/png/202408131032402.png)
 ### 将dist目录拖到vscode打开
 dist目录才是源码目录，找到里面
 ### 开始破解过程
 要修改的文件只有两个，一个是`dist/gitlens.js`，另一个是`dist/browser/gitlens.js`
+
 ![image.jpg](https://cdn.dml.us.kg/docs/2024/png/202408131032403.png)
-首先是`dist/gitlens.js`，先Ctrl+F查找`iY.qn.Free`，然后Ctrl+H替换为 `iY.qn.Pro`
-然后是`dist/browser/gitlens.js`，Ctrl+F查找`eS.qn.Free`，然后Ctrl+H替换为`eS.qn.Pro`
-最后重启vscode，搞定！
+
+dist/gitlens.js，dist/browser/gitlens.js文件文件，Ctrl+F查找.qn.Free，然后Ctrl+H替换为.qn.Pro 最后重启vscode，搞定！
+
 ![image.jpg](https://cdn.dml.us.kg/docs/2024/png/202408131032404.png)
-### 结语
-理论上所有收费插件都可以用这种方式破解
-
-> 来自: [vscode gitlens插件破解-CSDN博客](https://blog.csdn.net/qd1014751893/article/details/140224526)
-
