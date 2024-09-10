@@ -1,7 +1,7 @@
 ## 1、maven下载
 > 官方地址: [http://maven.apache.org/download.cgi](http://maven.apache.org/download.cgi) 
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121746095.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910141013824.png)
 ## 2、解压
 > 解压下载好的maven 放到指定路径下
 

@@ -27,7 +27,7 @@ FRP（Fast Reverse Proxy）是一个高性能的反向代理应用，它主要�
 - **远程办公**：通过FRP访问公司内部资源，如文件服务器、内部网站等。
 - **IoT设备管理**：通过FRP访问和管理部署在内网的IoT设备。
 
-![](https://cdn.dml.us.kg/docs/2024/png/202408261724269.png)
+![](https://cdn.fpic.top/docs/0/2024/png/20240910133319223.png)
 
 > 注意：从 [v0.52.0] 版本开始，配置文件由 frps.ini 改成了 frps.toml
 
@@ -90,7 +90,7 @@ webServer.password = "admin"
 
 ```
 输入ip+端口号 ，输入账号密码 访问 dashboard，页面如下： 服务端配置已完成 .
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408261724270.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133321227.png)
 
 
 
@@ -149,7 +149,7 @@ sudo systemctl enable frps
 ```
 ## 2、Nginx 配置
 ### 2.1、域名解析
-域名解析 添加 frp 以及 *.frp 二级域名，域名可自定义![image.png](https://cdn.dml.us.kg/docs/2024/png/202408261724271.png)
+域名解析 添加 frp 以及 *.frp 二级域名，域名可自定义![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133323717.png)
 ### 2.2、nginx 配置文件增加 如下配置
 ```
 server {
@@ -192,7 +192,7 @@ https://github.com/fatedier/frp/releases/download/v0.55.1/frp_0.55.1_windows_amd
 ### 3.2 配置
 > 解压 frp_0.55.1_windows_amd64.zip
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408261724272.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133325139.png)
 #### 3.2.1 修改配置
 > 修改frpc.toml 文件
 
@@ -231,10 +231,10 @@ windows 下启动命令：
 #### 3.2.3 访问 dashboard 页面
 > 可以看到 web 代理已经成功
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408261724273.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133327477.png)
 
 #### 3.2.4 浏览器访问代理接口
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408261724274.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133329940.png)
 
 ## 参考文档
 > 官方文档： [https://gofrp.org/zh-cn/docs/overview/](https://gofrp.org/zh-cn/docs/overview/)

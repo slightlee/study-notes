@@ -2,8 +2,8 @@
 ## 1、指定默认命令行 快捷键【Ctrl + shirt + P】
 > 默认使用 pwsh  【PowerShell】
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408131040888.png)
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408131040889.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133413551.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133417291.png)
 ## 2、setttings.json文件增加配置
 ```json
 // 默认激活命令行的配置 
@@ -23,4 +23,4 @@
 },
 ```
 ## 3、再次查看
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408131040890.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133418483.png)

@@ -43,7 +43,7 @@ brew cask install iterm2
 
 #### 4.1 先导入下载的 主题
 #### 4.2 选择 Dracula 主题
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408230859380.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910140949740.png)
 
 ## 5、配置Oh My Zsh
 `Oh My Zsh` 是对主题的进一步扩展。
@@ -51,7 +51,7 @@ brew cask install iterm2
 ### 安装方式1：
 > 官网：[https://ohmyz.sh/](https://ohmyz.sh/)
 
- ![image.png](https://cdn.dml.us.kg/docs/2024/png/202408230859381.png)
+ ![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910140952627.png)
 ### 安装方式2：
 > github地址：[https://github.com/ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 
@@ -93,8 +93,8 @@ vim ~/.zshrc
 
 source ~/.zshrc
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408230859382.png)
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408230859383.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133101741.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133103633.png)
 
 ## 7、自动建议填充
 这个功能是非常实用的，可以方便我们快速的敲命令。
@@ -107,7 +107,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 `**注：请务必保证插件顺序，zsh-syntax-highlighting 必须在最后一个。**`
 
 用下方这个
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408230859384.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133106160.png)
 
 效果如下：
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408230859385.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133107168.png)

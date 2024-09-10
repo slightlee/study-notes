@@ -18,12 +18,12 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 因此，整个命令的含义是，使用 wget 下载 NVM 的安装脚本文件，并将其内容通过管道传递给 bash 命令进行执行。这会导致 NVM 工具被安装到您的系统上。
 
 如果上方命令提示链接失败可以下载这个文件然后本地执行安装
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121737476.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133217190.png)
 下载 install.sh 文件内容  可以重命名下文件  这里 重命名为  nvm-install.sh 
 ```shell
 bash nvm-install.sh
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121737477.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133220113.png)
 
 ```shell
 bash: source ~/.bashrc
@@ -34,7 +34,7 @@ ksh: . ~/.profile
 ```
 
 终端键入"command -v nvm"，回车，如果输出了 "nvm"，代表已经安装成功
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121737478.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910141018636.png)
 或则
 ```shell
 $ nvm -v                   

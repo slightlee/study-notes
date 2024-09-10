@@ -13,7 +13,7 @@
 > The Missing Package Manager for macOS (or Linux) 
 > 用于MacOS（或Linux）的缺失的软件包管理器
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121716630.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133109106.png)
 ### 1.2 安装brew
 #### 1.2.1 官方提供安装方式
 ```shell
@@ -29,8 +29,8 @@ Failed to connect to raw.githubusercontent.com port 443: Connection refused
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
 ```
 可以根据实际需求选择源，这里以中科大为例，安装成功后 按照提示 刷新下配置文件或者重启下终端 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121716010.png)
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121725083.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910141304224.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133116869.png)
 #### 1.2.3 常用brew命令：
 > 本地软件库列表：brew ls 
 > 查找软件：brew search google（其中google可替换为要查找的软件关键字, 比如QQ） 
@@ -42,19 +42,19 @@ Failed to connect to raw.githubusercontent.com port 443: Connection refused
 ### 2.1 旧版本（不推荐）
 > [https://github.com/AdoptOpenJDK/homebrew-openjdk](https://github.com/AdoptOpenJDK/homebrew-openjdk) ，官方提示已被正式废弃了，推荐使用temurin，并且在2021-08-01（2021年8月1日）之后将不再得到任何更新。请相应调整你的使用。
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121725084.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910141003994.png)
 #### 2.1.1 搜索jdk
 ```shell
 brew search jdk
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121725085.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133124346.png)
 > 如果你获取的列表中没有 adoptopenjdk8 等，请执行 brew tap adoptopenjdk/openjdk。brew只收录了adoptopenjdk最后的版本，一些过期的版本，交由adoptopenjdk自己管理。而 brew tap adoptopenjdk/openjdk，则是拉取adoptopenjdk自管理包的信息。
 
 ```shell
 brew tap adoptopenjdk/openjdk
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121725086.png)
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121725087.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910141309436.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133132416.png)
 #### 2.1.2 安装 adoptopenjdk8
 ```shell
 brew install --cask adoptopenjdk8
@@ -63,7 +63,7 @@ brew install --cask adoptopenjdk8
 ```shell
 java -version
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121725088.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133138952.png)
 #### 2.1.4 查看jdk安装路径
 ```shell
 /usr/libexec/java_home -V
@@ -81,7 +81,7 @@ brew uninstall --cask adoptopenjdk8
 > 这个项目的新网站在这里被称为Adoptium。在Homebrew中，安装新的AdoptOpenJDK的包在这里名为temurin。
 > 网址：[https://formulae.brew.sh/cask/temurin](https://formulae.brew.sh/cask/temurin#default)
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121725089.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133143817.png)
 #### 2.2.1 安装最新版本
 ```shell
 brew install --cask temurin
@@ -97,7 +97,7 @@ brew install --cask temurin8    # jdk8
 ```shell
 /usr/libexec/java_home -V
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121725090.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133147512.png)
 ### 2.3 异常处理
 #### 问题1：
 > Error: Cask adoptopenjdk8 exists in multiple taps:
@@ -118,7 +118,7 @@ Mac系统默认使用bash作为终端，但是新的Mac系统已经默认使用z
 ```shell
  cat /etc/shells
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121725091.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133149722.png)
 ### 3.2 bash与zsh切换命令
 ```shell
 chsh -s /bin/zsh
@@ -170,7 +170,7 @@ source ~/.bash_profile   # 刷新配置
 source .zprofile
 ```
 **下面进行测试**
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121725092.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133153392.png)
 ### 3.3 on-my-zsh 配置
  在 .zshrc 文件添加 以下配置
 ```shell
@@ -185,7 +185,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 ```shell
 $ vim .zshrc
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121725093.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910141010346.png)
 刷新配置 source .zshrc
 ```shell
 $ source .zshrc

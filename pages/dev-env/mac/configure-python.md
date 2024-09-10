@@ -2,20 +2,20 @@
 ```shell
 brew search python
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121729109.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133241933.png)
 ## 安装 python 命令
 ```shell
 brew install python
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121729111.png)
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121729112.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133245104.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133249295.png)
 ## 安装路径
 > brew 安装路径 
 > **/usr/local/Cellar **
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121729113.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133252649.png)
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121729114.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910141023996.png)
 ## 配置环境变量
 > 在  .zshrc 文件 添加 
 

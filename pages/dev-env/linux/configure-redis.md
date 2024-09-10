@@ -243,4 +243,4 @@ systemctl disable firewalld.service #禁止firewall开机启动
 firewall-cmd --state #查看默认防火墙状态（关闭后显示notrunning，开启后显示running）
 ```
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png1620988793103-c57c7b0b-5fc7-491f-9cb3-b64244c533f7.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133032511.png)

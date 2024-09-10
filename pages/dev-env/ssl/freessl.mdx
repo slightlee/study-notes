@@ -5,9 +5,9 @@
 ## 1、域名授权
 > 添加域名、域名解析验证域名
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/1720594016934-1ed95fa8-9af9-4217-891b-377a9bb2b175.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133331317.png)
 ## 2、申请证书
-![image.png](https://cdn.dml.us.kg/docs/2024/png/1720504302841-9462e4e4-e00d-4795-886d-60b6650f79ae.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910141031832.png)
 
 ```shell
 acme.sh --issue -d *.1ddh.cn --dns dns_dp --server https://acme.freessl.cn/v2/DV90/directory/jbaukapgwukkxyicu102
@@ -55,23 +55,23 @@ acme.sh --issue -d *.1ddh.cn --dns dns_dp --server https://acme.freessl.cn/v2/DV
 ```
 
 - 执行命令后，完成安装即可获得 *.cer、*.key 两个文件地址。这个就是用于配置 ssl 域名证书的。
-![image.png](https://cdn.dml.us.kg/docs/2024/png/1720517567865-6798e124-6739-409b-93f9-54492a087dd0.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133341931.png)
 #### 同时签发多个【推荐】
 > 可同时签发 多个域名 用 -d 隔开 ，这样只会生成一个证书文件夹
 
 ```shell
 acme.sh --issue -d *.1ddh.cn -d 1ddh.cn --dns dns_dp --server https://acme.freessl.cn/v2/DV90/directory/jbaukapgwukkxyicu102
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/1722481274813-32f23337-4a3c-4881-8813-5bbc3bdcbc71.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133345884.png)
 ## 4、 nginx 配置
-![image-20240811012222448](https://cdn.dml.us.kg/docs/2024/png/image-20240811012222448.png)
-![image-20240811012632011](https://cdn.dml.us.kg/docs/2024/png/image-20240811012632011.png)
+![image-20240811012222448](https://cdn.fpic.top/docs/0/2024/png/20240910133349574.png)
+![image-20240811012632011](https://cdn.fpic.top/docs/0/2024/png/20240910133351713.png)
 按照上面配置 浏览器可以正常访问 ，部分客户端不能正常访问，比如小程序 会报 600001错误码。使用 [域名SSL/TLS安全评估报告](https://myssl.com/) 评测域名等级为B ，提示证书链不完整。
 
 ### 解决方案：
 ssl_certificate 配置路径  由  /root/.acme.sh/*.xxx.cn_ecc/*.xxx.cn.cer 改为  /root/.acme.sh/*.xxx.cn_ecc/fullchain.cer
 可详见 ：[https://github.com/acmesh-official/acme.sh/issues/4873](https://github.com/acmesh-official/acme.sh/issues/4873)
-![image.png](https://cdn.dml.us.kg/docs/2024/png/1720594551363-faf1ac19-d264-426f-9f2b-0581b80bb4c8.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133353545.png)
 
 ## 5、吊销证书
 ```shell

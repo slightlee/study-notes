@@ -14,7 +14,7 @@ brew install nginx
 ```shell
 brew info nginx
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121751389.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133206542.png)
 ## 3、homebrew方式启动和关闭nginx
 ### 启动
 ```
@@ -33,7 +33,7 @@ brew services stop nginx
 ```
 sudo nginx   或则 ./nginx  
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121751390.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133212173.png)
 ### 关闭
 
    - stop 表示立即停止nginx，不保存相关信息
@@ -46,4 +46,4 @@ sudo nginx -s stop    或者    nginx -s quit
 sudo nginx -s reload
 ```
 ## 5、访问测试
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121751391.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133215242.png)

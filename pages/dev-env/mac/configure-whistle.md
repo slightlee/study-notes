@@ -12,7 +12,7 @@ npm install -g whistle
 ```shell
 执行命令 whistle help 或 w2 help
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121743780.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133300511.png)
 ## 常用命令
 ### 启动whistle
 > 最新版本的whistle支持三种等价的命令 whistle、w2、wproxy
@@ -20,7 +20,7 @@ npm install -g whistle
 ```shell
 w2 start
 ```
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408121743781.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910141024338.png)
 如果要防止其他人访问配置页面，可以在启动时加上登录用户名和密码 
 
 ```shell

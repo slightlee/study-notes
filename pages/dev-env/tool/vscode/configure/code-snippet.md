@@ -1,15 +1,15 @@
 ### 生成代码片段
 可使用 [https://snippet-generator.app/](https://snippet-generator.app/) 网站快速生成
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408131039666.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133355686.png)
 ### 配置用户代码片段
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408131039667.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910141032763.png)
 > window 快捷键  Ctrl + shift + p
 > mac 快捷键 command + shift + p
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408131039668.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133403745.png)
 ### 修改 vue.json文件
 在搜索框中 输入 vue.json ,  把下面模版代码 添加到这个文件即可。
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408131039669.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910141034476.png)
 > 以修改vue为例，此处给出一个示例文件
 
 ```json
@@ -108,6 +108,6 @@
 
 ```
 ### 使用
-![image.png](https://cdn.dml.us.kg/docs/2024/png/202408131039670.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133410834.png)
 
 

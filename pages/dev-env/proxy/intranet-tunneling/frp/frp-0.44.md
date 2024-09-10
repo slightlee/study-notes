@@ -83,7 +83,7 @@ subdomain_host = frp.xx.cn
 > 输入ip+端口号 ，输入账号密码  访问，页面如下： 
 > 服务端配置已完成 .
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/1665391948002-8c3810d7-b98c-49b1-972d-f610153027dc.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910141311176.png)
 #### 1.2.4 停止
 > 使用 kill 命令
 
@@ -97,7 +97,7 @@ root     18724 10806  0 17:23 pts/0    00:00:00 grep --color=auto frp
 ### 2.1、域名解析
 > 域名解析 添加  frp 以及  *.frp 二级域名，域名可自定义
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/1665395885818-340fa227-a5c0-4f8b-aece-3c39a192016f.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133312359.png)
 ### 2.2、nginx 配置文件增加 如下配置
 ```shell
 server {
@@ -124,7 +124,7 @@ https://github.com/fatedier/frp/releases/download/v0.44.0/frp_0.44.0_windows_amd
 ### 3.2 配置
 > 解压 frp_0.44.0_windows_amd64.zip
 
-![image.png](https://cdn.dml.us.kg/docs/2024/png/1665393681002-f551bc2f-76e9-4c12-a630-6851adf135bb.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133313887.png)
 #### 3.2.1 修改配置
 ##### 3.2.1.1 默认方式
 > 修改 frpc.ini 文件
@@ -253,4 +253,4 @@ frps_full.ini （服务端）
 frpc_full.ini （客户端）
 ```
 ## 5、系统对应软件说明
-![image.png](https://cdn.dml.us.kg/docs/2024/png/1671075304146-8dba247c-2750-4936-be03-47ae72b537dd.png)
+![image.png](https://cdn.fpic.top/docs/0/2024/png/20240910133316558.png)
