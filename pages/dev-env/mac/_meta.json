@@ -1,6 +1,6 @@
 {
   "index": "介绍页",
-  "brew": "安装 brew",
+  "configure-brew": "安装 brew",
   "configure-ohmyzsh": "安装 oh my zsh",
   "configure-jdk": "安装 jdk",
   "configure-python": "安装 python",
