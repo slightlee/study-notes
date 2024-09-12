@@ -44,7 +44,7 @@ export default {
     defaultMenuCollapseLevel: 1,
     toggleButton: true,
     titleComponent({ title }) {
-      const toolTitles = ["开发工具", "SSL证书", "Mac环境", "Linux环境", "Git", "代理工具"];
+      const toolTitles = ["开发工具", "SSL证书", "Mac环境", "Linux环境", "Window环境", "Git", "代理工具"];
       if (toolTitles.includes(title)) {
         return (
           <div style={{ display: "flex", alignItems: "center" }}>

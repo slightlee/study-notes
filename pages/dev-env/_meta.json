@@ -15,12 +15,16 @@
   "-- 4": {
     "type": "separator"
   },
-  "git": "Git",
+  "window": "Window环境",
   "-- 5": {
     "type": "separator"
   },
-  "proxy": "代理工具",
+  "git": "Git",
   "-- 6": {
+    "type": "separator"
+  },
+  "proxy": "代理工具",
+  "-- 7": {
     "type": "separator"
   }
 }
