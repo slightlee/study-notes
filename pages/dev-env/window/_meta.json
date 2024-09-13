@@ -1,4 +1,5 @@
 {
   "index": "介绍页",
-  "configure-nvm": "安装 nvm"
+  "configure-nvm": "安装 nvm",
+   "port": "端口查看占用"
 }
