@@ -1,5 +1,6 @@
 {
   "index": "介绍页",
   "configure-nvm": "安装 nvm",
-   "port": "端口查看占用"
+  "port": "端口查看占用",
+  "mouse-open-file": "打开方式添加到鼠标右键"
 }
