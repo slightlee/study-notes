@@ -2,5 +2,7 @@
   "index": "介绍页",
   "configure-redis": "安装 redis",
   "configure-variable": "配置环境变量",
-  "configure-jdk":  "配置 jdk环境变量"
+  "configure-jdk":  "配置 jdk环境变量",
+  "import-export-data-command":  "导入、导出mysql数据命令"
+
 }
