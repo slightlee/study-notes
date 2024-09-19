@@ -6,5 +6,6 @@
   "import-export-data-command":  "导入、导出mysql数据命令",
   "system-info":  "获取系统信息",
   "configure-firewalld":  "防火墙",
-  "port": "端口查看"
+  "port": "端口查看",
+  "memory-command": "内存查看命令"
 }
