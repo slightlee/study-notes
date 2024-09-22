@@ -7,5 +7,7 @@
   "system-info-command":  "获取系统信息",
   "configure-firewalld":  "防火墙",
   "port-command": "端口查看",
-  "memory-command": "内存查看命令"
+  "memory-command": "内存查看命令",
+  "environment-variable": "环境变量"
+
 }
