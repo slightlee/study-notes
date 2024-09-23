@@ -3,11 +3,11 @@
   "configure-redis": "安装 redis",
   "configure-variable": "配置环境变量",
   "configure-jdk":  "配置 jdk环境变量",
-  "import-export-data-command":  "导入、导出mysql数据命令",
-  "system-info-command":  "获取系统信息",
-  "configure-firewalld":  "防火墙",
-  "port-command": "端口查看",
-  "memory-command": "内存查看命令",
-  "environment-variable": "环境变量"
-
+  "configure-crontab":  "定时器",
+  "configure-environment-variable": "配置环境变量",
+  "configure-firewalld":  "配置防火墙",
+  "command-import-export-data":  "导入、导出mysql数据命令",
+  "command-system-info":  "获取系统信息命令",
+  "command-port": "端口查看命令",
+  "command-memory": "内存查看命令"
 }
