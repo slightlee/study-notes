@@ -8,5 +8,6 @@
   "command-import-export-data":  "导入、导出mysql数据命令",
   "command-system-info":  "获取系统信息命令",
   "command-port": "端口查看命令",
-  "command-memory": "内存查看命令"
+  "command-memory": "内存查看命令",
+  "command-centos-yum-source": "centos yum源切换"
 }
